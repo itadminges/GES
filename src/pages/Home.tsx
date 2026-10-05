@@ -147,24 +147,6 @@ export const Home: React.FC = () => {
             <label htmlFor="slider_4" className="page4" aria-label="Go to slide 4: 24Hour Effective Support" onClick={() => setCurrentSlide(4)}></label>
           </div>
 
-          {/* Tap Navigation Arrows */}
-          <button
-            type="button"
-            className="hero-nav-arrow hero-nav-prev"
-            onClick={handlePrevSlide}
-            aria-label="Previous Slide"
-          >
-            <i className="fas fa-chevron-left" aria-hidden="true"></i>
-          </button>
-          <button
-            type="button"
-            className="hero-nav-arrow hero-nav-next"
-            onClick={handleNextSlide}
-            aria-label="Next Slide"
-          >
-            <i className="fas fa-chevron-right" aria-hidden="true"></i>
-          </button>
-
           {/* Slider #1 */}
           <div className="slider slide-1">
             <img
