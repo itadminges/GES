@@ -161,7 +161,7 @@ export const News: React.FC = () => {
             <h1>Quality Assurance in Education.</h1>
             <h2>Changes in learning materials, teacher expectations, and student deliverables</h2>
           </div>
-          <img src="/assets/img/news/banner.png" alt="News Banner" style={{ width: '100%' }} />
+          <img src="/assets/img/news/banner.png" alt="News Banner" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
           <div className="bottom-bg"></div>
         </div>
       </header>

@@ -154,9 +154,16 @@ export const Home: React.FC = () => {
               alt="Quest for Excellence - GES Quality Education"
               className="slide-img"
               width="900"
-              height="700"
+              height="689"
               fetchPriority="high"
               decoding="async"
+              style={{
+                width: 'auto',
+                maxWidth: '60vw',
+                height: 'auto',
+                maxHeight: '85vh',
+                objectFit: 'contain'
+              }}
             />
             <div className="moving-circles"></div>
             <div className="slider-content">
@@ -176,10 +183,17 @@ export const Home: React.FC = () => {
               src="/assets/img/banner/ch-2.png"
               alt="Request a Meeting with GES Administration"
               className="slide-img"
-              width="900"
-              height="700"
+              width="901"
+              height="690"
               loading="lazy"
               decoding="async"
+              style={{
+                width: 'auto',
+                maxWidth: '60vw',
+                height: 'auto',
+                maxHeight: '85vh',
+                objectFit: 'contain'
+              }}
             />
             <div className="moving-circles2"></div>
             <div className="slider-content">
@@ -199,10 +213,17 @@ export const Home: React.FC = () => {
               src="/assets/img/banner/ch-3.png"
               alt="Inside GES Quality Education Community"
               className="slide-img"
-              width="900"
-              height="700"
+              width="700"
+              height="536"
               loading="lazy"
               decoding="async"
+              style={{
+                width: 'auto',
+                maxWidth: '60vw',
+                height: 'auto',
+                maxHeight: '85vh',
+                objectFit: 'contain'
+              }}
             />
             <div className="moving-circles3"></div>
             <div className="slider-content">
@@ -223,9 +244,16 @@ export const Home: React.FC = () => {
               alt="24-Hour Effective Educational Support"
               className="slide-img"
               width="900"
-              height="700"
+              height="689"
               loading="lazy"
               decoding="async"
+              style={{
+                width: 'auto',
+                maxWidth: '60vw',
+                height: 'auto',
+                maxHeight: '85vh',
+                objectFit: 'contain'
+              }}
             />
             <div className="moving-circles4"></div>
             <div className="slider-content">

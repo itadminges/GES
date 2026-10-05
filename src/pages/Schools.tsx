@@ -150,7 +150,7 @@ export const Schools: React.FC = () => {
                           height="340"
                           loading="lazy"
                           decoding="async"
-                          style={{ width: '100%', height: '340px', objectFit: 'cover' }}
+                          style={{ width: '100%', height: 'auto', maxHeight: '340px', objectFit: 'cover' }}
                         />
                         <div
                           style={{

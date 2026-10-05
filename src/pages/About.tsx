@@ -141,7 +141,7 @@ export const About: React.FC = () => {
               loading="lazy"
               decoding="async"
               className="project-img"
-              style={{ maxWidth: '100%', borderRadius: '15px' }}
+              style={{ maxWidth: '100%', height: 'auto', objectFit: 'cover', borderRadius: '15px' }}
             />
             <h1>OUR DOORS</h1>
             <h3>WE ARE ALWAYS OPEN TO LEARNERS</h3>

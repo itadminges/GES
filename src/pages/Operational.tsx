@@ -119,7 +119,7 @@ export const Operational: React.FC = () => {
             height="450"
             loading="lazy"
             decoding="async"
-            style={{ maxWidth: '100%', borderRadius: '15px' }}
+            style={{ maxWidth: '100%', height: 'auto', objectFit: 'cover', borderRadius: '15px' }}
           />
           <br />
           <h3 style={{ marginTop: '25px', color: '#888' }}>Complete</h3>

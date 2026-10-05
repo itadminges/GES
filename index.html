@@ -130,6 +130,21 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
       }
 
+      /* Universal Responsive Layout & Image Safety */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      img, picture, svg, video {
+        max-width: 100%;
+        height: auto;
+      }
+
       /* Prevent Logo Distortion & Stretching */
       .logo img,
       .navbar-shrink img,
@@ -138,6 +153,51 @@
         height: auto !important;
         max-width: 100% !important;
         object-fit: contain !important;
+      }
+
+      /* Hero Slider Proportional Contain - Strictly Prevent Distortion */
+      .slider .slide-img,
+      .slider > img,
+      .slide-1 .slide-img,
+      .slide-2 .slide-img,
+      .slide-3 .slide-img,
+      .slide-4 .slide-img {
+        width: auto !important;
+        max-width: 60vw !important;
+        height: auto !important;
+        max-height: 85vh !important;
+        object-fit: contain !important;
+      }
+
+      @media only screen and (max-width: 991px) {
+        .slider .slide-img,
+        .slider > img,
+        .slide-1 .slide-img,
+        .slide-2 .slide-img,
+        .slide-3 .slide-img,
+        .slide-4 .slide-img {
+          max-width: 85vw !important;
+          max-height: 52vh !important;
+          right: 5% !important;
+          left: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .slider .slide-img,
+        .slider > img,
+        .slide-1 .slide-img,
+        .slide-2 .slide-img,
+        .slide-3 .slide-img,
+        .slide-4 .slide-img {
+          max-width: 90vw !important;
+          max-height: 48vh !important;
+          left: 50% !important;
+          right: auto !important;
+          transform: translateX(-50%) !important;
+          bottom: 0 !important;
+          position: absolute !important;
+        }
       }
     </style>
 

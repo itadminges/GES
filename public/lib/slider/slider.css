@@ -244,25 +244,35 @@
 /*slide content*/
 .slide-1 .slider-content, .slide-3 .slider-content {
   width: 50%;
-  left: -60px;
+  left: 0;
 }
 .slide-1 .slide-img, .slide-3 .slide-img {
-height: 90vh;
-left: -80px;
-float: left;
-right: auto;
-z-index:1000;
+  height: auto;
+  max-height: 85vh;
+  width: auto;
+  max-width: 55vw;
+  object-fit: contain;
+  left: 0;
+  bottom: 0;
+  float: left;
+  right: auto;
+  z-index: 1000;
 }
 .slide-2 .slider-content, .slide-4 .slider-content {
   width: 50%;
-  left: 60px;    padding-left: 170px;
+  left: 5%;
 }
 .slide-2 .slide-img, .slide-4 .slide-img {
-height: 90vh;
-left: 20px;
-float: left;
-right: auto;
-z-index:1000;
+  height: auto;
+  max-height: 85vh;
+  width: auto;
+  max-width: 55vw;
+  object-fit: contain;
+  left: auto;
+  right: 5%;
+  bottom: 0;
+  float: right;
+  z-index: 1000;
 }
 /* Number Pagination */
 .number-pagination {
@@ -368,48 +378,63 @@ z-index:1000;
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
+  .slide-1 .slider-content,
+  .slide-2 .slider-content,
+  .slide-3 .slider-content,
+  .slide-4 .slider-content {
+    width: 90% !important;
+    left: 5% !important;
+    right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    top: 14% !important;
+    text-align: left !important;
+  }
+  .slide-1 .slide-img,
+  .slide-2 .slide-img,
+  .slide-3 .slide-img,
+  .slide-4 .slide-img {
+    height: auto !important;
+    max-height: 48vh !important;
+    width: auto !important;
+    max-width: 90vw !important;
+    object-fit: contain !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    float: none !important;
+    opacity: 0.85 !important;
+  }
   .slider h2 {
     font-size: 20px;
   }
   .slider h4 {
-    font-size: 16px;
+    font-size: 28px;
   }
-
   .slider-content {
-    padding: 0 2%
+    padding: 0 2%;
   }
-
   .navigation {
     padding: 0 2%;
   }
-
   .navigation-left {
     display: none;
   }
-
   .number-pagination {
     right: 2%;
   }
   .slider-pagination {
     left: 2%;
   }
-
   .slider .buy-now-btn {
     padding: 0 15px;
     width: 175px;
     height: 42px;
   }
-
   .slider .buy-now-btn:after {
     top: 15px;
-  }
-
-  .slider > img {
-    right: 2%;
-  }
-
-  .slide-1 > img {
-    right: -110px;
   }
 }
 
