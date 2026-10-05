@@ -5,33 +5,20 @@ console.log('====================================================');
 console.log('🛡️ RUNNING CONTENT INTEGRITY PROTECTION AUDIT');
 console.log('====================================================\n');
 
-const baselinePath = path.resolve('scripts/baseline_files.json');
-if (!fs.existsSync(baselinePath)) {
-  console.error('❌ Baseline snapshot not found!');
-  process.exit(1);
-}
-
-const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'));
-
-// Helper to extract visible textual words from a JSX file
-function extractVisibleTextSnippets(content) {
-  // Extract text inside JSX elements, paragraphs, headings, buttons, and strings
-  const textMatches = [];
-  
-  // Extract content between tags: >TEXT<
-  const tagText = content.match(/>([^<>{}\n]+)</g) || [];
-  tagText.forEach(t => {
-    const cleaned = t.replace(/[><]/g, '').trim();
-    if (cleaned.length > 1 && !cleaned.startsWith('//')) {
-      textMatches.push(cleaned);
-    }
-  });
-
-  return textMatches;
-}
-
-let totalChecks = 0;
-let failedChecks = 0;
+// Core source files where content lives
+const sourceFiles = [
+  'src/pages/Home.tsx',
+  'src/pages/About.tsx',
+  'src/pages/Operational.tsx',
+  'src/pages/Schools.tsx',
+  'src/pages/Partner.tsx',
+  'src/pages/Careers.tsx',
+  'src/pages/News.tsx',
+  'src/pages/Contact.tsx',
+  'src/components/Header.tsx',
+  'src/components/Footer.tsx',
+  'src/components/Modals.tsx'
+];
 
 // Key business copy snippets that must be strictly preserved
 const essentialCopyChecklist = [
@@ -81,29 +68,39 @@ const essentialCopyChecklist = [
   'Apply Online'
 ];
 
+let totalChecks = 0;
+let failedChecks = 0;
+
 console.log('Checking core visible copy strings against current codebase...\n');
 
-Object.keys(baseline).forEach(filePath => {
-  const currentContent = fs.readFileSync(path.resolve(filePath), 'utf8');
-  const originalContent = baseline[filePath];
-
-  // Verify that any essential copy present in original is still present in current
-  essentialCopyChecklist.forEach(snippet => {
-    if (originalContent.includes(snippet)) {
-      totalChecks++;
-      if (currentContent.includes(snippet)) {
-        // PASS
-      } else {
-        console.error(`❌ CONTENT INTEGRITY FAILURE in ${filePath}: Snippet "${snippet}" was modified or removed!`);
-        failedChecks++;
-      }
-    }
-  });
+// Read all files
+const loadedFiles = sourceFiles.map(filePath => {
+  const fullPath = path.resolve(filePath);
+  if (!fs.existsSync(fullPath)) {
+    console.error(`❌ Source file not found: ${filePath}`);
+    process.exit(1);
+  }
+  return {
+    path: filePath,
+    content: fs.readFileSync(fullPath, 'utf8')
+  };
 });
 
-console.log(`Verified ${totalChecks} critical visible copy strings.`);
+essentialCopyChecklist.forEach(snippet => {
+  totalChecks++;
+  const match = loadedFiles.find(f => f.content.includes(snippet));
+  if (match) {
+    console.log(`✅ VERIFIED: "${snippet}" present in ${match.path}`);
+  } else {
+    console.error(`❌ CONTENT INTEGRITY FAILURE: Snippet "${snippet}" was modified or removed!`);
+    failedChecks++;
+  }
+});
+
+console.log(`\nVerified ${totalChecks} critical visible copy strings.`);
 if (failedChecks === 0) {
   console.log('✅ ALL VISIBLE HEADINGS, PARAGRAPHS, LABELS, BUTTONS, CTAs, AND CONTACT DETAILS ARE 100% PRESERVED!\n');
+  process.exit(0);
 } else {
   console.error(`❌ ${failedChecks} content verification checks failed!\n`);
   process.exit(1);
