@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2640 1683.6" style="enable-background:new 0 0 2640 1683.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:3319;stroke-dashoffset:3319;}
+
+.zoomInsp {
+  stroke-width: 3;
+  stroke-dasharray: 6619;
+  stroke-dashoffset: 6638;
+
+	animation: draw 10.2s 1.6s both; 
+}
+
+.fadeInsp {
+	animation: fade 1s 6.5s both; 
+}
+@keyframes draw {
+  90% {
+    stroke-dashoffset: 1644;
+    stroke-width: 3;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+    fill-opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+</style>
+<path class="st0" d="M809,109.5c655.7-264.3,1697.7,16.4,1799.5,573.3c97.1,531.4-360.9,863.3-935.1,965.4S664.9,1509,543.4,1378.3
+	s-34.5-275.6-68.3-360.8c-33.4-84.4-333.4,45-455-135.1C-66.8,778,155.3,373,809,109.5z"/>
+<path class="st1 zoomInsp" d="M195,895.9c-22.2,46.4-74.7,173.3-31.4,314.2c10.3,33.4,47.3,153.8,138.4,180.9c45.3,13.5,74.3-5,122.4-11.7
+	c66.5-9.2,163.9,4.9,296.4,111.7"/>
+<path class="st1 zoomInsp" d="M1757.7,122.9c79.3-32.6,220.4-75.5,387.6-45.2c96.4,17.5,219.8,39.8,289.7,148.3
+	c84.2,130.8,27.2,287.6,18.3,310.8"/>
+</svg>

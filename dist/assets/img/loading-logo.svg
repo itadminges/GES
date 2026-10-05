@@ -1,0 +1,48 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.52 124.41">
+<defs>
+<style>
+.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}
+
+.zoomInsp {
+  stroke-width: 3;
+  stroke-dasharray: 6619;
+  stroke-dashoffset: 6638;
+  animation: draw 4s linear alternate both infinite;
+}
+
+.fadeInsp {
+	animation: fade 2s 2.5s both; 
+}
+@keyframes draw {
+  90% {
+    stroke-dashoffset: 1644;
+    stroke-width: 3;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+    fill-opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+</style>
+</defs>
+<rect class="cls-1 zoomInsp" x="103.39" y="47.61" width="71.12" height="28.43"/>
+<rect class="cls-1 zoomInsp" x="103.39" y="94.99" width="77.74" height="28.43"/>
+<polygon class="cls-1 zoomInsp" points="186.9 1 174.37 29.43 103.81 29.43 103.81 1 186.9 1"/>
+<path class="cls-1 zoomInsp" d="M240.2,40.14h35.91l12.53-28.43h-61L240.2,40.14Z" transform="translate(-7.66 -10.71)"/>
+<path class="cls-1 zoomInsp" d="M37.09,60.82h0c.41-1.84,1-4,1.7-6.59A21.21,21.21,0,0,1,44.69,45q4.65-4.59,8.72-4.59H68.09L55.45,11.79Q34.08,12.92,21.32,30.23,8.71,47.15,8.66,73.35Z" transform="translate(-7.66 -10.71)"/>
+<path class="cls-1 zoomInsp" d="M47,65.2l12.6,28.73H74.29V105.4H56.9q-20.64,0-20.64-39.22a26.88,26.88,0,0,1,.83-5.36h0l-27,11.92h0l-1.4.61a140.41,140.41,0,0,0,1.27,16.1,56.62,56.62,0,0,0,10.42,26.32q9.3,12.69,21.69,15.91,9.57,2.44,12.11,2.45h48V65.2Z" transform="translate(-7.66 -10.71)"/>
+<path class="cls-1 zoomInsp" d="M68.09,40.45H89.25l12.93-28.74H58.44c-1,0-2,0-3,.08Z" transform="translate(-7.66 -10.71)"/>
+<path class="cls-1 zoomInsp" d="M256.39,59.39h0L243.86,87.82H252a14.46,14.46,0,0,1,4.5,1.07Q263,91.49,263,97.3a8.42,8.42,0,0,1-3.52,7.18,12.38,12.38,0,0,1-7.46,2.14h-56.2v27.51h60.56q15.5,0,24.08-11,8.17-10.22,8.17-27.3Q288.64,59.4,256.39,59.39Z" transform="translate(-7.66 -10.71)"/>
+<path class="cls-1 zoomInsp" d="M230.76,59.39a9.45,9.45,0,0,1-6.69-2.71,9.07,9.07,0,0,1-2.89-6.91q0-9.63,9.58-9.63h9.44L227.66,11.71h0q-15.07,0-23.66,11Q195.83,33,195.83,49.61q0,12.54,4.79,21.86Q206,82,216.25,85.83q5.35,2,17.89,2h9.72l12.53-28.43Z" transform="translate(-7.66 -10.71)"/>
+<polygon class="cls-1 zoomInsp" points="38.93 54.43 51.53 83.16 66.25 83.16 94.14 83.16 94.14 54.43 38.93 54.43"/>
+</svg>

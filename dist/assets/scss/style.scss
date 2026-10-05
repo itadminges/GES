@@ -1,0 +1,77 @@
+@mixin text-invisible {
+    text-indent: -9999em;
+  }
+
+  $dot-menu-size: 20px;
+  $dot-menu-dot-color: #fff;
+  $dot-menu-dot-color-active: #fff;
+  $dot-menu-dot-size: $dot-menu-size / 6;
+  @mixin dot-menu-circle {
+    content: "";
+    position: absolute;
+    width: $dot-menu-dot-size;
+    height: $dot-menu-dot-size;
+    border-radius: $dot-menu-dot-size;
+    background-color: $dot-menu-dot-color;
+    transition: .8s;
+  }
+  
+  .dot-menu {
+    position: relative;
+    &:hover {
+      .dot-menu__label {
+        background-color: $dot-menu-color-active;
+      }
+    }
+  }
+  
+  .dot-menu__checkbox {
+    display: none;
+  }
+  
+  .dot-menu__label:before,
+  .dot-menu__label:after {
+    @include dot-menu-circle;
+    left: $dot-menu-size / 2 - $dot-menu-dot-size / 2;
+    transition: .2s;
+  }
+  
+  .dot-menu__label:after {
+    top: $dot-menu-size - $dot-menu-size / 3;
+  }
+  
+  .dot-menu__label:before {
+    top: $dot-menu-size / 6;
+  }
+  
+  .dot-menu__checkbox:checked, .dot-menu__checkbox:hover, .dot-menu__checkbox:focus {
+    ~ .dot-menu__label {
+      background-color: $dot-menu-color-active;
+    }
+    ~ .dot-menu__label:before,
+    ~ .dot-menu__label span:before,
+    ~ .dot-menu__label:after {
+      background-color: $dot-menu-dot-color-active;
+      //move all icons into the center
+      top: $dot-menu-size / 2 - $dot-menu-dot-size / 2
+    }
+    ~ .dot-menu__label span:before {
+      width: $dot-menu-size / 2;
+      left: $dot-menu-size / 2 - $dot-menu-dot-size - $dot-menu-dot-size / 2;
+    }
+  }
+  
+  .dot-menu__label {
+    cursor: pointer;
+    width: $dot-menu-size;
+    height: $dot-menu-size;
+    background-color: $dot-menu-color;
+    display: block;
+    height: 32px !important;
+    @include text-invisible;
+    span:before {
+      @include dot-menu-circle;
+      left: $dot-menu-size / 2 - $dot-menu-dot-size / 2;
+      top: $dot-menu-size / 2 - $dot-menu-dot-size / 2
+    }
+  }

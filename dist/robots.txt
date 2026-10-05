@@ -1,0 +1,21 @@
+# robots.txt for https://www.ges.om/
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /lib/
+
+# Disallow private, administrative, api, development, and internal routes
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /scripts/
+Disallow: /staging/
+Disallow: /preview/
+Disallow: /dev/
+
+# Prevent parameter crawler traps and duplicate indexing
+Disallow: /*?*
+
+# Host & Sitemap specification
+Sitemap: https://www.ges.om/sitemap.xml

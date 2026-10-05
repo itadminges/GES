@@ -1,0 +1,70 @@
+
+.scroller {
+    overflow-x: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    margin: 0px 50px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #05214f;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #de393f;
+    border-radius: 9px;
+}
+
+.item {
+    min-width: 33.333333%;
+    scroll-snap-align: center;
+    margin-bottom: 30px;
+    padding: 0px;
+    margin-top: 30px;
+}
+.item img {
+    margin: 15px auto 30px;
+    width: 120px;
+    height: 120px;
+    border: solid 4px #ffffff;
+    border-radius: 60px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 25%);
+    z-index: 2;
+}
+.testimonials .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: rgba(95, 106, 117, 0.3);
+    z-index: 1;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.testimonials .btn:hover{
+    background-color: rgba(95, 106, 117, 0.5);
+    cursor: pointer;
+}
+.testimonials .btn.next {
+    right: 15px;
+}
+.testimonials .btn.prev {
+    left: 15px;
+}
+@media screen and (max-width: 480px) {
+    .item {
+        padding: 0 30px;
+    }
+    .card {
+        padding: 80px 30px 30px;
+    }
+}

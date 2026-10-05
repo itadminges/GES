@@ -1,0 +1,89 @@
+.dot-menu {
+  position: relative;
+}
+
+.dot-menu:hover .dot-menu__label {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dot-menu__checkbox {
+  display: none;
+}
+
+.dot-menu__label:before,
+.dot-menu__label:after {
+  content: "";
+  position: absolute;
+  width: 3.33333px;
+  height: 3.33333px;
+  border-radius: 3.33333px;
+  background-color: #3d3d23;
+  -webkit-transition: .8s;
+  transition: .8s;
+  left: 8.33333px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.dot-menu__label:after {
+  top: 13.33333px;
+}
+
+.dot-menu__label:before {
+  top: 3.33333px;
+}
+
+.dot-menu__checkbox:checked ~ .dot-menu__label {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dot-menu__checkbox:checked ~ .dot-menu__label:before,
+.dot-menu__checkbox:checked ~ .dot-menu__label span:before,
+.dot-menu__checkbox:checked ~ .dot-menu__label:after {
+  background-color: #000000;
+  top: 8.33333px;
+}
+
+.dot-menu__checkbox:checked ~ .dot-menu__label span:before {
+  width: 10px;
+  left: 5px;
+}
+
+.dot-menu__label {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  display: block;
+  text-indent: -9999em;
+}
+
+.dot-menu__label span:before {
+  content: "";
+  position: absolute;
+  width: 3.33333px;
+  height: 3.33333px;
+  border-radius: 3.33333px;
+  background-color: #3d3d23;
+  -webkit-transition: .8s;
+  transition: .8s;
+  left: 8.33333px;
+  top: 8.33333px;
+}
+/*# sourceMappingURL=style.css.map */
+
+.dot-menu__label {
+    width: 100% !important;
+    position: relative;
+    padding-top: 5px !important;
+    line-height: 40px !important;
+    margin-bottom: -32px;
+}
+.dot-menu__label:before, .dot-menu__label:after {
+    margin-left: -30px !important;
+    margin-top: 8px !important;
+    background-color: #ffffff !important;
+}
+.dot-menu__checkbox:checked ~ .dot-menu__label, .dot-menu__label {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
