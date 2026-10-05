@@ -129,6 +129,16 @@
         border-radius: 4px;
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
       }
+
+      /* Prevent Logo Distortion & Stretching */
+      .logo img,
+      .navbar-shrink img,
+      .navbar-shrink .logo img,
+      .school-logo img {
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+      }
     </style>
 
     <!-- Baseline Structured Data: Organization & WebSite Graph (Machine-Readable SEO & GEO) -->

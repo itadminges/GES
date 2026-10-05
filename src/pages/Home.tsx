@@ -10,13 +10,37 @@ export const Home: React.FC = () => {
   const [visionIndex, setVisionIndex] = useState(0);
   const { openModal } = useModal();
 
-  // Auto-advance slider smoothly every 6 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev % 4) + 1);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev % 4) + 1);
+  };
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev === 1 ? 4 : prev - 1));
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null || touchStartY === null) return;
+    const diffX = touchStartX - e.changedTouches[0].clientX;
+    const diffY = touchStartY - e.changedTouches[0].clientY;
+    // Register horizontal swipe if horizontal distance > vertical and > 40px
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+      if (diffX > 0) {
+        handleNextSlide();
+      } else {
+        handlePrevSlide();
+      }
+    }
+    setTouchStartX(null);
+    setTouchStartY(null);
+  };
 
   const videoItems = [
     {
@@ -77,7 +101,11 @@ export const Home: React.FC = () => {
         <Header isInternal={false} />
 
         {/* CSS Slider Wrapper */}
-        <div className="css-slider-wrapper">
+        <div
+          className="css-slider-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <input
             type="radio"
             name="slider"
@@ -118,6 +146,24 @@ export const Home: React.FC = () => {
             <label htmlFor="slider_3" className="page3" aria-label="Go to slide 3: Inside GES Community" onClick={() => setCurrentSlide(3)}></label>
             <label htmlFor="slider_4" className="page4" aria-label="Go to slide 4: 24Hour Effective Support" onClick={() => setCurrentSlide(4)}></label>
           </div>
+
+          {/* Tap Navigation Arrows */}
+          <button
+            type="button"
+            className="hero-nav-arrow hero-nav-prev"
+            onClick={handlePrevSlide}
+            aria-label="Previous Slide"
+          >
+            <i className="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            type="button"
+            className="hero-nav-arrow hero-nav-next"
+            onClick={handleNextSlide}
+            aria-label="Next Slide"
+          >
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
 
           {/* Slider #1 */}
           <div className="slider slide-1">

@@ -56,14 +56,22 @@ export const Header: React.FC<HeaderProps> = ({ isInternal = false }) => {
     >
       {/* Logo */}
       <div className="logo">
-        <Link to="/" aria-label="GES Quality Education Home">
+        <Link to="/" aria-label="GES Quality Education Home" style={{ display: 'inline-block', lineHeight: 0 }}>
           <img
             src={logoSrc}
             alt="GES Quality Education"
-            width="168"
-            height="58"
+            width="293"
+            height="145"
             loading="eager"
             decoding="async"
+            style={{
+              height: 'auto',
+              maxHeight: isScrolled ? '48px' : '65px',
+              width: 'auto',
+              maxWidth: '100%',
+              objectFit: 'contain',
+              display: 'block'
+            }}
           />
         </Link>
       </div>

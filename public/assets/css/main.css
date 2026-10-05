@@ -2748,6 +2748,8 @@ width: 95px;
 
   .navbar-shrink img {
     width: 100px;
+    height: auto;
+    object-fit: contain;
   }
   .navbar-shrink .logo {
     top: 13px;
@@ -3412,6 +3414,8 @@ margin-top: 60px;
 }
 .logo img {
   width: 90px;
+  height: auto;
+  object-fit: contain;
 }
 #mainNav.navbar-shrink {
   height: 60px;
