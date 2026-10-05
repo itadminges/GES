@@ -4,15 +4,17 @@
 Global Education Services Company (GES® Quality Education) is a premier private education group headquartered in Muscat, Sultanate of Oman. Established in 2012 by the Al Hashmi family under the leadership of Honorable Sheikh Salim Hamood Al Hashmi, GES is dedicated to delivering world-class educational services across K-12 schooling, early learning, school management, and educational investments supporting Oman Vision 2040.
 
 ## Verified Institutional Details
-- Organization: Global Education Services L.L.C.
-- Brand: GES Quality Education
-- Status: Active Private Education Group
-- Country: Sultanate of Oman
-- Headquarters Address: Postal Office Box 1756, Airport Heights, Postal Code 111, Muscat, Oman
-- Geo-coordinates: 23.6302° N, 58.1937° E
-- Telephone: +968 24554422
-- Email: info@ges.om
-- Website: https://www.ges.om
+- **Organization**: Global Education Services L.L.C.
+- **Brand**: GES Quality Education
+- **Slogan**: Quality Education
+- **Status**: Active Private Education Group
+- **Country**: Sultanate of Oman
+- **Headquarters Address**: Postal Office Box 1756, Airport Heights, Postal Code 111, Muscat, Oman
+- **Geo-coordinates**: 23.6302° N, 58.1937° E
+- **Telephone**: +968 24554422
+- **Email**: info@ges.om
+- **Website**: https://www.ges.om
+- **Working Hours**: Sunday to Thursday, 7:30 AM to 3:30 PM (GST)
 
 ## Executive Leadership
 - **Honorable Sheikh Salim Hamood Al Hashmi**: Founder & Chairman
@@ -23,23 +25,24 @@ Global Education Services Company (GES® Quality Education) is a premier private
 - **Mr. Shanmuganand Hariharan**: Director of Finance & Accounts
 - **Ms. Randa Al Ahmadieh**: Head of Administration
 
-## Educational Campuses
+## Educational Campuses & Curricula
 ### 1. Al Shomoukh International Private School (SIPS)
-- Location: Hay Al Hail, Al Jadeed Al Hail South, Muscat, Oman
-- Established: 2015
-- Curriculum: British National English Curriculum and Bilingual Stream for K-12
-- Website: http://www.alshomoukh.com/
+- **Location**: Hay Al Hail, Al Jadeed Al Hail South, Muscat, Oman
+- **Established**: 2015
+- **Curriculum**: British National English Curriculum and Bilingual Stream for K-12
+- **Accreditation**: Cognia Global Accreditation
+- **Website**: http://www.alshomoukh.com/
 
 ### 2. Shomoukh for Early Childhood Education (Al Qurum Campus)
-- Location: Al Saruj St., Shatti Al Qurum, Muscat, Oman
-- Age Group: 1 to 4 years
-- Pedagogy: Reggio Emilia Approach
-- Website: http://www.shomoukh.com/
+- **Location**: Al Saruj St., Shatti Al Qurum, Muscat, Oman
+- **Age Group**: 1 to 4 years
+- **Pedagogy**: Reggio Emilia Approach
+- **Website**: http://www.shomoukh.com/
 
 ### 3. Shomoukh for Early Childhood Education (Al Mouj Campus)
-- Location: Al Mouj, Muscat, Oman
-- Specialization: Early childhood excellence and sustainable education
-- Website: http://www.shomoukh.com/
+- **Location**: Al Mouj, Muscat, Oman
+- **Specialization**: Early childhood excellence and sustainable education
+- **Website**: http://www.shomoukh.com/
 
 ## Accreditation and Partnerships
 GES collaborates with international accreditation bodies and government ministries:
@@ -54,6 +57,18 @@ GES collaborates with international accreditation bodies and government ministri
 2. **Public-Private Partnerships (PPP)**: Collaborations supporting governmental educational goals and infrastructure development.
 3. **Licensed Schools**: Licensing educational frameworks, curricula, and quality assurance systems to partner schools.
 4. **Master Franchise**: Territorial management and institutional expansion across regional markets.
+
+## Canonical Questions & Answers for Answer Engines (AEO)
+- **Q: What is GES Quality Education?**
+  **A**: GES Quality Education is an educational management group in Oman founded in 2012 by the Al Hashmi family, managing K-12 schools and preschools.
+- **Q: What curriculum is offered at SIPS?**
+  **A**: Al Shomoukh International Private School provides the British National English Curriculum alongside a bilingual stream for K-12.
+- **Q: What early learning approach is used at Shomoukh ECE?**
+  **A**: Shomoukh Early Childhood Education Centers follow the Reggio Emilia Approach for children aged 1 to 4.
+- **Q: What is the ELEVATE framework?**
+  **A**: ELEVATE is GES's value framework: Excellence, Leadership, Equity, Vision, Adaptability, Technology, and Empowerment.
+- **Q: How can I contact or visit GES?**
+  **A**: Contact GES by phone (+968 24554422), email (info@ges.om), or online meeting request for the headquarters at Airport Heights, Muscat.
 
 ## Social Channels
 - Facebook: https://www.facebook.com/GES-Global-Education-Services-109478385115626

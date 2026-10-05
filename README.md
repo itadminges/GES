@@ -77,7 +77,7 @@ This modern web platform delivers:
 
 ---
 
-## 🔍 SEO, GEO & Structured Data
+## 🔍 SEO, GEO & AEO (Answer Engine Optimization)
 
 ### Technical SEO & Crawlability
 - **Self-referencing Canonical URLs**: Every page renders an explicit canonical tag matching `https://www.ges.om/<route>`.
@@ -100,20 +100,27 @@ Designed for next-generation AI search engines (Perplexity, ChatGPT Search, Micr
 - **Entity Disambiguation**:
   - Persistent URI IDs (`https://www.ges.om/#organization` and `https://www.ges.om/#website`) linking all schema graphs.
   - Explicit Wikidata and Wikipedia references for institutional accreditations and governmental partners.
+  - Entity-level knowledge taxonomy with `knowsAbout`, `areaServed`, and `subOrganization` links.
+
+### Answer Engine Optimization (AEO)
+Engineered for conversational AI engines, voice assistants (Siri, Google Assistant, Alexa), and featured snippet extraction:
+- **`FAQPage` Schema**: Direct question-and-answer pairs matching user intent across `/`, `/about`, `/schools`, `/operational`, `/partner`, and `/contact`. All answers are strictly grounded in verified project content.
+- **`SpeakableSpecification`**: Directs text-to-speech engines and voice assistants to the most relevant heading and content summaries (`cssSelector: ['h1', 'p']`).
+- **Canonical Q&A in `llms.txt`**: Machine-readable answers for quick AI retrieval.
 
 ### Schema.org JSON-LD Hierarchy
 The site injects rich JSON-LD graph objects across all canonical routes:
 
-| Route | Schemas Applied | Entity Description |
+| Route | Schemas Applied | Entity Description & AEO Direct Answers |
 |---|---|---|
-| `/` | `EducationalOrganization`, `WebSite`, `LocalBusiness`, `VideoObject` | Core corporate entity, corporate video metadata, contact points, location, search action |
-| `/about` | `AboutPage`, `EducationalOrganization`, `Person` | Detailed executive profiles for 6 board and operational leaders |
-| `/operational` | `ItemPage`, `EducationalOrganization` | Business models: PPP, Private Schools, Franchising, Licensing |
-| `/schools` | `ItemPage`, `School`, `Preschool` | Institutional schema for SIPS and Shomoukh ECE centers |
-| `/partner` | `ItemPage`, `EducationalOrganization` | Accreditation partners, institutional partnerships, Ministry credentials |
-| `/careers` | `ItemPage`, `Organization` | Recruitment process, hiring entity details, application steps |
-| `/news` | `CollectionPage`, `NewsArticle` | Press releases, corporate announcements, and educational impact stories |
-| `/contact` | `ContactPage`, `LocalBusiness`, `ContactPoint` | Geocoordinates, telephone, physical address, opening hours |
+| `/` | `EducationalOrganization`, `WebSite`, `LocalBusiness`, `VideoObject`, `FAQPage`, `SpeakableSpecification` | Core corporate entity, corporate videos, contact points, location, search action, primary entity FAQs |
+| `/about` | `AboutPage`, `EducationalOrganization`, `Person`, `FAQPage`, `SpeakableSpecification` | Executive profiles (Chairman, CEO, MD, VP, Academics), ELEVATE framework Q&A |
+| `/operational` | `ItemPage`, `EducationalOrganization`, `FAQPage`, `SpeakableSpecification` | 4 operational models (PPP, Private Schools, Franchising, Licensing) Q&A |
+| `/schools` | `CollectionPage`, `School`, `Preschool`, `FAQPage`, `SpeakableSpecification` | SIPS (British Curriculum) & Shomoukh ECE centers (Reggio Emilia) Q&A |
+| `/partner` | `WebPage`, `EducationalOrganization`, `FAQPage`, `SpeakableSpecification` | Accreditation partners (Cognia, ECIS, Ministries) Q&A |
+| `/careers` | `WebPage`, `Organization`, `SpeakableSpecification` | Recruitment process, hiring entity details, application steps |
+| `/news` | `CollectionPage`, `NewsArticle`, `SpeakableSpecification` | Press releases, corporate announcements, and educational impact stories |
+| `/contact` | `ContactPage`, `LocalBusiness`, `ContactPoint`, `FAQPage`, `SpeakableSpecification` | Geocoordinates, telephone, physical address, office hours, meeting booking Q&A |
 
 ---
 

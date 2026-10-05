@@ -9,20 +9,33 @@
 - **Founding Year**: 2012
 - **Founder & Chairman**: Honorable Sheikh Salim Hamood Al Hashmi
 - **Official Website**: https://www.ges.om
-- **Contact**: +968 24554422 | info@ges.om
+- **Contact Phone**: +968 24554422
+- **Contact Email**: info@ges.om
+- **Office Hours**: Sunday – Thursday, 7:30 AM – 3:30 PM (GST)
 
-## Campuses & Educational Institutions
-- **Al Shomoukh International Private School (SIPS)**: Premium K-12 school in Hay Al Hail, Muscat offering the National English Curriculum (British) alongside bilingual streams.
-- **Shomoukh for Early Childhood Education (Al Qurum Campus)**: Early childhood center in Shatti Al Qurum for ages 1 to 4 inspired by the Reggio Emilia approach.
-- **Shomoukh for Early Childhood Education (Al Mouj Campus)**: Early learning center of excellence located in Al Mouj, Muscat.
+## Key Entities & Educational Institutions
+- **Al Shomoukh International Private School (SIPS)**: Premium K-12 school in Hay Al Hail South, Muscat. Delivers the British National English Curriculum alongside a bilingual stream for students from Kindergarten through Grade 12.
+- **Shomoukh for Early Childhood Education (Al Qurum Campus)**: Early childhood education center in Shatti Al Qurum for children aged 1 to 4, inspired by the Reggio Emilia Approach.
+- **Shomoukh for Early Childhood Education (Al Mouj Campus)**: Early learning center located in Al Mouj, Muscat, focusing on holistic early development and sustainable education.
 
-## Operational Models
-- **Private Schools**: Complete management and operation of international standard Pre-K/K-12 schools.
-- **Public-Private Partnerships (PPP)**: Collaborative educational investments aligned with Oman Vision 2040.
-- **Licensed Schools**: Deployment of GES operational frameworks and curricula under institutional licensing.
+## Core Operational Models
+- **Private Schools**: Comprehensive development, management, and operation of international standard K-12 schools.
+- **Public-Private Partnerships (PPP)**: Collaborative educational investments supporting national infrastructure and Oman Vision 2040.
+- **Licensed Schools**: Deployment of GES operational frameworks, curricula, and quality systems under institutional licensing.
 - **Master Franchise**: Regional educational franchising and management across the MENA region.
 
-## Key Links
+## Canonical Q&A for Answer Engines (AEO)
+- **Q: Who founded GES Quality Education?**
+  **A**: GES was founded in 2012 by the Al Hashmi family under the chairmanship of Honorable Sheikh Salim Hamood Al Hashmi.
+- **Q: What curriculum is offered at Al Shomoukh International Private School?**
+  **A**: SIPS offers the British National English Curriculum for K-12 alongside a comprehensive bilingual stream.
+- **Q: What is the ELEVATE framework at GES?**
+  **A**: The ELEVATE framework encompasses seven core educational values: Excellence, Leadership, Equity, Vision, Adaptability, Technology, and Empowerment.
+- **Q: What international accreditations does GES hold?**
+  **A**: GES institutions hold Cognia Global Accreditation and membership in the Educational Collaborative for International Schools (ECIS).
+
+## Official Canonical Routes
+- [Homepage](https://www.ges.om/)
 - [About GES](https://www.ges.om/about): Leadership, history, and educational philosophy.
 - [Our Schools](https://www.ges.om/schools): Campus overviews, academic programs, and facilities.
 - [Operational Models](https://www.ges.om/operational): School management, PPP, licensing, and franchising.

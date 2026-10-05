@@ -150,7 +150,9 @@ try {
       'Person',
       'NewsArticle',
       'VideoObject',
-      'LocalBusiness'
+      'LocalBusiness',
+      'FAQPage',
+      'SpeakableSpecification'
     ];
 
     expectedSchemas.forEach(schema => {

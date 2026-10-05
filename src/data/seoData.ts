@@ -1,7 +1,8 @@
 /**
- * Comprehensive SEO, Social, GEO, and Schema.org Structured Data
- * strictly derived from verified project content and configuration.
- * No fabricated statistics, reviews, ratings, or addresses.
+ * Comprehensive SEO, Social, GEO (Generative Engine Optimization),
+ * and AEO (Answer Engine Optimization) Structured Data.
+ * Strictly derived from verified project content and configuration.
+ * No fabricated statistics, reviews, ratings, prices, or credentials.
  */
 
 export interface BreadcrumbItem {
@@ -35,7 +36,7 @@ export const createBreadcrumbListSchema = (items: BreadcrumbItem[]) => ({
   }))
 });
 
-// Shared Organization Identity
+// Shared Organization Identity (GEO & Knowledge Graph Optimized)
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
@@ -44,13 +45,16 @@ export const organizationSchema = {
   alternateName: 'GES Quality Education',
   legalName: 'Global Education Services L.L.C.',
   url: 'https://www.ges.om',
+  slogan: 'Quality Education',
   logo: {
     '@type': 'ImageObject',
     '@id': 'https://www.ges.om/#logo',
     url: 'https://www.ges.om/assets/img/banner/ges-logo.png',
-    caption: 'GES Quality Education Logo'
+    caption: 'GES Quality Education Logo',
+    width: '293',
+    height: '145'
   },
-  image: 'https://www.ges.om/assets/img/banner/ges-logo.png',
+  image: `${BASE_URL}/assets/img/banner/ges-logo.png`,
   description: 'Leading private education group in the Sultanate of Oman, delivering world-class K-12 premium schools, preschools, and early learning centers since 2012.',
   foundingDate: '2012',
   founder: {
@@ -73,6 +77,36 @@ export const organizationSchema = {
   },
   telephone: '+968 24554422',
   email: 'info@ges.om',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Sultanate of Oman',
+    sameAs: 'https://en.wikipedia.org/wiki/Oman'
+  },
+  knowsAbout: [
+    'K-12 Education',
+    'Early Childhood Education',
+    'British National Curriculum',
+    'Reggio Emilia Approach',
+    'School Operations & Management',
+    'Public-Private Partnerships (PPP)',
+    'Cognia Accreditation'
+  ],
+  award: [
+    'Cognia Global Accreditation',
+    'ECIS Membership'
+  ],
+  subOrganization: [
+    {
+      '@type': 'School',
+      name: 'Al Shomoukh International Private School (SIPS)',
+      url: 'http://www.alshomoukh.com/'
+    },
+    {
+      '@type': 'Preschool',
+      name: 'Shomoukh for Early Childhood Education (Al Qurum & Al Mouj)',
+      url: 'http://www.shomoukh.com/'
+    }
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -88,11 +122,12 @@ export const organizationSchema = {
     'https://www.instagram.com/ges.education/',
     'https://twitter.com/GES_education',
     'https://www.linkedin.com',
-    'https://www.youtube.com'
+    'https://www.youtube.com',
+    'https://www.wikidata.org/wiki/Q842'
   ]
 };
 
-// Shared Website Identity with SearchAction
+// Shared Website Identity with SearchAction (SEO & Machine-Readable Discoverability)
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -107,7 +142,7 @@ export const websiteSchema = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://www.ges.om/news?q={search_term_string}'
+      urlTemplate: `${BASE_URL}/news?q={search_term_string}`
     },
     'query-input': 'required name=search_term_string'
   }
@@ -135,7 +170,51 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Global Education Services Company (GES Quality Education) is a premier private education group in Oman, delivering world-class K-12 schools, preschools, and early learning centers.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'main p', '.slider-content h2']
+        }
+      },
+      // AEO: Homepage Direct Answer FAQ
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Global Education Services Company (GES)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Global Education Services Company (GES Quality Education) is a premier private education group founded in 2012 by the Al Hashmi family in the Sultanate of Oman, operating world-class K-12 schools, preschools, and early learning centers.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Which schools and educational centers are operated by GES in Oman?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GES operates Al Shomoukh International Private School (SIPS) in Hay Al Hail, Shomoukh for Early Childhood Education Al Qurum Campus in Shatti Al Qurum, and Shomoukh for Early Childhood Education Al Mouj Campus in Muscat.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What are the core operational models of GES Quality Education?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GES operates across four primary pillars: Private Schools, Public-Private Partnerships (PPP), Licensed Schools, and Master Franchising.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How can I contact GES Quality Education in Muscat?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can contact GES by telephone at +968 24554422, email at info@ges.om, or visit the headquarters at Airport Heights, P.O. Box 1756, Postal Code 111, Muscat, Sultanate of Oman.'
+            }
+          }
+        ]
       },
       {
         '@context': 'https://schema.org',
@@ -189,7 +268,43 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Established in 2012 by the Al Hashmi family, GES Quality Education is Oman’s premier private education group, committed to academic excellence, innovation, and Oman Vision 2040.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'p']
+        }
+      },
+      // AEO: About Leadership & Values FAQ
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/about#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Who founded GES Quality Education and what is its vision?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GES Quality Education is the lifelong dream of the Al Hashmi family, founded in 2012 under the leadership of Honorable Sheikh Salim Hamood Al Hashmi. Its vision is to empower innovative leaders equipped with knowledge, skills, and values to thrive globally.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the ELEVATE framework at GES?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The ELEVATE framework represents GES commitment to Education: Excellence, Leadership, Equity, Vision, Adaptability, Technology, and Empowerment.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Who are the members of the executive leadership at GES?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The leadership team includes Honorable Sheikh Salim Hamood Al Hashmi (Chairman), Sheikha Janat Salim Hamood Al Hashmi (CEO), Sheikha Jinan Salim Hamood Al Hashmi (Managing Director), Sheikh Julanda Salim Hamood Al Hashmi (Vice President), Ms. Sarah Saeed (Head of Academics), Mr. Shanmuganand Hariharan (Director of Finance & Accounts), and Ms. Randa Al Ahmadieh (Head of Administration).'
+            }
+          }
+        ]
       },
       {
         '@context': 'https://schema.org',
@@ -269,7 +384,34 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Explore GES Quality Education operational models: Private Schools, Public-Private Partnerships (PPP), Licensed Schools, and Master Franchise models across Oman.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2', 'p']
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/operational#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What are the four operational pillars of GES?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The four operational pillars are: 1) Private Schools (comprehensive campus management), 2) Public-Private Partnerships (PPP collaboration aligned with national goals), 3) Licensed Schools (curriculum and operational framework licensing), and 4) Master Franchise (regional MENA expansion).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does GES offer complete school management services?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, GES provides end-to-end management spanning academic leadership, curriculum deployment, human resources, facilities management, financial planning, and institutional marketing.'
+            }
+          }
+        ]
       }
     ]
   },
@@ -293,7 +435,43 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Discover Al Shomoukh International Private School (SIPS) and Shomoukh Early Childhood Education campuses in Al Qurum and Al Mouj, Muscat, Oman.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2', 'p']
+        }
+      },
+      // AEO: Schools & Curricula FAQ
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/schools#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What curriculum is taught at Al Shomoukh International Private School (SIPS)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Al Shomoukh International Private School offers the British National English Curriculum alongside a bilingual stream for K-12 students, established in 2015.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What age groups are served at Shomoukh Early Childhood Education Centers?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Shomoukh Early Childhood Education Centers serve children aged one to four years, featuring programs inspired by the Reggio Emilia Approach.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Where are the GES campuses located in Muscat?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'SIPS is located in Hay Al Hail South; Shomoukh ECE Al Qurum is located on Al Saruj Street in Shatti Al Qurum; and Shomoukh ECE Al Mouj is located in Al Mouj, Muscat.'
+            }
+          }
+        ]
       },
       {
         '@context': 'https://schema.org',
@@ -368,7 +546,34 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Partner with Global Education Services Company (GES). Discover complete school management, licensing, PPP, and franchise opportunities in Oman and internationally.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'p']
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/partner#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Which accreditation bodies recognize GES schools?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GES institutions hold Cognia Global Accreditation, ECIS membership, and work under the regulatory supervision of Oman Ministry of Education and Ministry of Social Development.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How can investors or institutions partner with GES?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Organizations can partner through school management agreements, PPP educational infrastructure investments, curriculum licensing, or master franchising by contacting info@ges.om.'
+            }
+          }
+        ]
       }
     ]
   },
@@ -392,7 +597,11 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Build your career with GES Quality Education Network. We recruit top educational and administrative talent globally with structured continuous professional development.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'p']
+        }
       }
     ]
   },
@@ -416,7 +625,11 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Read the latest updates, international accreditation news, partnership milestones, and press coverage from GES Quality Education.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'p']
+        }
       },
       {
         '@context': 'https://schema.org',
@@ -545,7 +758,34 @@ export const seoData: Record<string, PageSEO> = {
         isPartOf: { '@id': `${BASE_URL}/#website` },
         about: { '@id': `${BASE_URL}/#organization` },
         description: 'Contact GES Quality Education in Muscat, Oman. Inquire about school admissions, partnership opportunities, meeting requests, or general support.',
-        inLanguage: 'en'
+        inLanguage: 'en',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'p', '.contact-info']
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${BASE_URL}/contact#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What are the office hours for GES Quality Education in Muscat?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GES administrative offices are open Sunday through Thursday from 7:30 AM to 3:30 PM (closed on Friday and Saturday).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How can I schedule a meeting with GES administration?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can submit an online Meeting Request specifying your preferred date and time range directly through the GES website Contact portal, or call +968 24554422.'
+            }
+          }
+        ]
       },
       {
         '@context': 'https://schema.org',
